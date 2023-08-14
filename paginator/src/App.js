@@ -13,7 +13,8 @@ function App() {
   useEffect(() => {
     const getCounries = async ()=> {
       setLoading(true)
-      const res = await axios.get('https://restcountries.com/v2/all')
+      const res = await axios.get('https://restcountries.com/v3.1/all')
+      console.log(res.data)
       setCountries(res.data)
       setLoading(false)
     }
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <div className='conteiner mt-5'>
-      <h1 className='text-primary'>Страны</h1>
+      <h1 className='text-primary text-center'><a href='/'>Страны</a></h1>
       <Countries countries={currentCountry} loading={loading} />
       <Pagination 
         countriesPerPage={countriesPerPage}
