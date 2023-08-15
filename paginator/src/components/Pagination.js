@@ -9,7 +9,7 @@ const Pagination = ({ countriesPerPage, totalCountries, paginate }) => {
 
     return (
         <div>
-            <ul className="pagination">
+            <ul className="pagination justify-content-center">
                 {
                     pageNumbers.map(number => (
                         <li className="page-item" key={number}>
